@@ -10,44 +10,43 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.towns.button_counter_townsend.MainActivity">
 
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="59dp"
-        android:layout_marginStart="59dp"
-        android:layout_marginBottom="107dp"
-        android:id="@+id/ascend_button" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/ascend_button"
-        android:layout_toRightOf="@+id/ascend_button"
-        android:layout_toEndOf="@+id/ascend_button"
-        android:layout_marginLeft="51dp"
-        android:layout_marginStart="51dp"
-        android:id="@+id/descend_button" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/descend_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
-        android:id="@+id/clear_button" />
-
     <TextView
-        android:text="TextView"
+        android:text="@integer/count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:id="@+id/countTextView"
+        android:textSize="30sp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="138dp"
-        android:id="@+id/textView" />
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/button_descend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/descend_button"
+        android:layout_above="@+id/clear_button"
+        android:layout_toRightOf="@+id/countTextView"
+        android:layout_toEndOf="@+id/countTextView" />
+
+    <Button
+        android:text="@string/button_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/clear_button"
+        android:layout_marginTop="61dp"
+        android:layout_below="@+id/ascend_button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/button_ascend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ascend_button"
+        android:elevation="0dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/countTextView"
+        android:layout_toStartOf="@+id/countTextView" />
+
+
 </RelativeLayout>
