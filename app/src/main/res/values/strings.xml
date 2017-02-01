@@ -3,5 +3,4 @@
     <string name="button_ascend">+1</string>
     <string name="button_descend">-1</string>
     <string name="button_clear">Clear</string>
-    <integer name="count">0</integer>
 </resources>

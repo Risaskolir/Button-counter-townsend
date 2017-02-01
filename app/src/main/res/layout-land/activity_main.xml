@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.towns.button_counter_townsend.MainActivity">
+
+    <Button
+        android:text="@string/button_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/clear_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp" />
+
+    <TextView
+        android:text="@integer/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:id="@+id/countTextView"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/button_ascend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ascend_button"
+        android:elevation="0dp"
+        android:layout_marginBottom="23dp"
+        android:layout_above="@+id/clear_button"
+        android:layout_toLeftOf="@+id/clear_button"
+        android:layout_toStartOf="@+id/clear_button" />
+
+    <Button
+        android:text="@string/button_descend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/descend_button"
+        android:layout_alignBaseline="@+id/ascend_button"
+        android:layout_alignBottom="@+id/ascend_button"
+        android:layout_toRightOf="@+id/clear_button"
+        android:layout_toEndOf="@+id/clear_button" />
+
+
+</RelativeLayout>
