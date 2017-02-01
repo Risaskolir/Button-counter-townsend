@@ -1,5 +1,6 @@
 package com.example.towns.button_counter_townsend;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private Button descButton;
     private Button clearButton;
     private TextView countText;
+    private View mainActivity;
     private Integer count;
 
     @Override
@@ -24,12 +26,14 @@ public class MainActivity extends AppCompatActivity {
         descButton = (Button)findViewById(R.id.descend_button);
         clearButton = (Button)findViewById(R.id.clear_button);
         countText = (TextView)findViewById(R.id.countTextView);
+        mainActivity = findViewById(R.id.activity_main);
+        mainActivity.setBackgroundColor(Color.argb(255, 255, 255, count));
         countText.setText(count.toString());
 
         ascButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                addOne();
+                add();
                 countText.setText(count.toString());
             }
         });
@@ -37,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         descButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                removeOne();
+                remove();
                 countText.setText(count.toString());
             }
         });
@@ -66,15 +70,24 @@ public class MainActivity extends AppCompatActivity {
         countText.setText(count.toString());
     }
 
-    public void addOne(){
-        count++;
+    public void add(){
+        count = count+5;
+        if(count >= 0 && count <= 255)
+            mainActivity.setBackgroundColor(Color.argb(255, 255, 255, count));
+        else if(count < 0 && count >= -255)
+            mainActivity.setBackgroundColor(Color.argb(255, 255, 255, count*-1));
     }
 
-    public void removeOne(){
-        count--;
+    public void remove(){
+        count = count - 5;
+        if(count >= 0 && count <= 255)
+            mainActivity.setBackgroundColor(Color.argb(255, 255, 255, count));
+        else if(count < 0 && count >= -255)
+            mainActivity.setBackgroundColor(Color.argb(255, 255, 255, count*-1));
     }
 
     public void clearCount(){
         count = 0;
+        mainActivity.setBackgroundColor(Color.argb(255, 255, 255, count));
     }
 }
