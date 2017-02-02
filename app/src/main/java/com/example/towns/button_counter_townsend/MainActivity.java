@@ -68,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(savedInstanceState);
         count = savedInstanceState.getInt("countSave");
         countText.setText(count.toString());
+        if(count >= 0 && count <= 255)
+            mainActivity.setBackgroundColor(Color.argb(255, 255, 255, count));
+        else if(count < 0 && count >= -255)
+            mainActivity.setBackgroundColor(Color.argb(255, 255, 255, count*-1));
+
     }
 
     public void add(){
