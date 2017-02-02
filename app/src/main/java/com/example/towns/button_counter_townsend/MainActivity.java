@@ -72,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
             mainActivity.setBackgroundColor(Color.argb(255, 255, 255, count));
         else if(count < 0 && count >= -255)
             mainActivity.setBackgroundColor(Color.argb(255, 255, 255, count*-1));
+        else
+            mainActivity.setBackgroundColor(Color.argb(255, 255, 255, 255));
 
     }
 
